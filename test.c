@@ -1,8 +1,11 @@
-# c-datatable
-## A C Implementation of Data Table (Rows and Columns)
+// Copyright (C) 2023 Kamiar Bahri
+//
+#include <stdio.h>
+#include <stdlib.h>
+#include "datatable.c"
 
-#### Example
-```c
+int main(int argc, char** argv) {
+
     DATATABLE* dt = new_datatable("Guitar is the song");
 
     datatable_add_col(dt, "Country");
@@ -44,11 +47,6 @@
     }
     printf("\n");
 
-Output:
+    return (EXIT_SUCCESS);
+}
 
-*** TABLE: Guitar is the song ***
-    Country     State           City 
-[1] U.S.A       California      Los Angeles
-[2] France      Alsace          Strasbourg
-[3] Spain       Albacete        Nerpio
-```
